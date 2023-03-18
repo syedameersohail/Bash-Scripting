@@ -1,0 +1,48 @@
+### Standard out 
+
+*filtering examples: Sort and Unique
+
+#sort values 
+echo -e "Apple\nCarrot\nBanana" | sort
+
+
+#get unique values count 
+echo -e "Apple\nCarrot\nBanana" | sort | uniq -c 
+
+# chain and send the output to a text file if same file exists the data will be erased and new data inputted
+echo -e "Apple\nCarrot\nBanana" | sort > fruits.txt
+
+#to append data to a new file
+echo -e "Apple\nCarrot\nBanana" | sort >> fruits.txt
+
+*Grep
+echo -e "Apple\nCarrot\nBanana" | sort >> fruits.txt | uniq -c | grep Apple
+
+*reversing
+#expected 3991
+echo 1993 | rev
+
+### Standard input
+#to prompt user for input
+read -p 'File:' Filename
+
+#less command
+less is a Linux command used for filtering and viewing text files one screen page at a time. It is more advanced than the more and most commands.
+less <fruits.txt
+
+
+### Standard error
+* push error to a file
+ls -a -5 error >>error.txt
+
+*throw away error
+ls -l /var/fake/direct>/dev/null
+
+### ------------shell logic and control flow------------------------
+
+objectives
+1. what is shell control flow
+2. using shell control flow to solve problems
+3. using shell loops
+
+
